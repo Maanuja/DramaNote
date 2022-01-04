@@ -1,0 +1,53 @@
+#identite, #mypost{
+    display: none;
+}
+
+#identite:target, #mypost:target{
+    display: block;
+}
+#identite table,  #changemdp table{
+    width: 80%;
+    /* border-collapse: collapse; */
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+}
+
+h1, .cid{
+    font-family: Poppins,sans-serif;
+    text-align: center;
+    font-weight: 222;
+    text-decoration: underline;
+}
+
+#avscom, #changemdp{
+    display: none;
+}
+
+#changemdp:target{
+    display: block;
+}
+.eye i {
+    margin-left: -30px;
+    cursor: pointer;
+}
+.moche{
+    color: red;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+.center {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type=text],input[type=email],input[type=file],input[type=password], textarea, select{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-top: 6px;
+    background: var(--white);
+    resize: vertical;
+}

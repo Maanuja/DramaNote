@@ -1,0 +1,37 @@
+<?php $titled = 'DramaNote | UpdatePost'; ?>
+<?php $css = '' ?>
+<?php ob_start(); ?>
+
+        <div class="container">
+            <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+                <h1 class="display-4 fw-normal">Delete <?php echo $post->getTitle(); ?></h1>
+            </div>
+            <form action="" class="row g-3" method="POST" onsubmit="return confirm('Do you really want to delete this post?');">
+                <div class="col-md-6">
+                    <label for="title" class="form-label">TiTLE</label>
+                    <input type="text" name="title" class="form-control" id="title" value="<?php echo $post->getTitle(); ?>">
+                </div>
+                <div class="col-md-6">
+                    <label for="title" class="form-label">Post ID</label>
+                    <input type="text" name="id" class="form-control" id="id" value="<?php echo $post->getId(); ?>">
+
+                </div>
+                <div class="col-12">
+                    <label for="content" class="form-label">Content</label>
+                    <textarea name="content" class="form-control" placeholder="CONTENT ARTICLES"><?php echo $post->getContent(); ?></textarea>
+                </div>
+                <div class="col-md-6">
+                    <label for="date" class="form-label">Created on </label>
+                    <input type="text" name="createdAt" class="form-control" id="createdAt" value="<?php echo $post->getCreatedAt()->format('Y-m-d H:i:s'); ?>">
+                </div>
+                <div class="col-md-6">
+                    <label for="date" class="form-label">Deleted on </label>
+                    <input type="text" name="deletedAt" class="form-control" id="deletedAt" value="<?php echo (new \DateTime())->format('Y-m-d H:i:s'); ?>">
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Delete</button>
+                </div>
+            </form>
+        </div>
+<?php $content = ob_get_clean(); ?>
+<?php require('src/view/main.php'); ?>
