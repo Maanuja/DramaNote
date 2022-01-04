@@ -1,5 +1,4 @@
 # Php MVC website
-# ecommerce
 Le but du site:
     Le site permet de créer des posts sur des Dramas de tout genre et ici majoritairement coréen.
 
